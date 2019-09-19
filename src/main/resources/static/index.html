@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>File upload/download rest api example</title>
+<link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+	<noscript>
+		<h2>Sorry! Your browser doesn't support javascript</h2>
+	</noscript>
+	<div class="upload-content">
+		<div class="single-upload">
+			<h3>Upload Single File</h3>
+			<form id="singleUploadForm" name="singleUploadForm" enctype="multipart/form-data">
+				<input id="singleFileUploadInput" type="file" name="file"
+					class="file-input" required />
+				<button type="submit" class="primary submit-button">Submit</button>
+			</form>
+			<div class="uploadResponse">
+				<div id="singleFileUploadError"></div>
+				<div id="singleFileUploadSuccess"></div>
+
+			</div>
+
+		</div>
+		<div class="multi-upload">
+			<h3>Upload Multiple Files</h3>
+			<form id="multiFileUploadForm" name="multiFileUploadForm" enctype="multipart/form-data">
+				<input id="multiFileUploadInput" type="file" name="files"
+					class="file-input" multiple required>
+				<button type="submit" class="primary submit-button">Submit</button>
+			</form>
+			<div class="uploadResponse">
+				<div id="multiFileUploadError"></div>
+				<div id="multiFileUploadSuccess"></div>
+			</div>
+		</div>
+
+	</div>
+	<script src="/js/main.js"></script>
+</body>
+</html>
